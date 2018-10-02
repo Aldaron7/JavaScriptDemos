@@ -1,0 +1,51 @@
+<div>
+  Title:
+  <br/>
+  <input type="text" [(ngModel)]="_title" size="50" />
+  <br/>
+  <br/> Body:
+  <br/>
+  <textarea [(ngModel)]='_body' rows="2" cols="50">
+  </textarea>
+  <br/>
+  <button (click)="onAdd()">Add</button>
+</div>
+<p>
+  <b>You Added:</b>
+</p>
+<p *ngIf="_added.length == 0">None</p>
+<p *ngFor="let added of _added">
+  {{added.title}}
+</p>
+
+<h1>Posts</h1>
+<h1>Post Title Names</h1>
+<p>Result:</p>
+<p>{{_result}}</p>
+<p>Result Async:</p>
+<p>{{_result|async}}</p>
+<ul>
+  <li *ngFor="let post of _posts">
+    <b>{{post.title}}:</b> {{post.body}}
+    <button (click)="showPost(post.
+    id)">Show</button>
+  </li>
+</ul>
+<div class="error" *ngIf="_error">
+  Error: {{_error.status}}: {{_error.statusText}}
+</div>
+
+<h1>Countries</h1>
+<ul>
+  <li *ngFor="let language of _languages">
+    {{language.name}}&nbsp;({{language.code}})
+  </li>
+</ul>
+
+<div #modal id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h3>{{this._post.title}}</h3>
+    <p>{{this._post.body}}</p>
+  </div>
+</div>

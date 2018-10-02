@@ -1,0 +1,30 @@
+Change this field:
+<input #firstInput [(ngModel)]="name" />
+<hr/> History
+<app-name [name]="name"></app-name>
+<hr/> Log
+<p *ngFor="let log of logs">
+  {{log}}
+</p>
+<hr/> Enter Array (comma-separated):
+<input [(ngModel)]="numbers" (onModelChange)="onModelChange" />
+<br/>
+<app-numbers [numbers]="numbers.split(',')"></app-numbers>
+<hr/> Crew
+<app-crew>
+  <app-member>Captain Kirk</app-member>
+  <app-member>Spock</app-member>
+  <app-member>Sulu</app-member>
+  <app-member>Bones</app-member>
+  <app-member>Checkov</app-member>
+</app-crew>
+<hr/> Card
+<app-card>{{card}}</app-card>
+<button (click)="pickCard($event)">Pick a Card</button>
+<hr/> InputCheck
+<input [(ngModel)]="input" />
+<br/> {{input}}
+<br/>
+<div #message></div>
+<hr/>
+<h1>{{count}}</h1>

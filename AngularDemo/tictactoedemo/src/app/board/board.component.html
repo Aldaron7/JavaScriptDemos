@@ -1,0 +1,14 @@
+<div class="game-board">
+  <div class="board-row">
+    <app-square *ngFor="let square of squares.slice(0,3)" [square]="square"
+                (squareClicked)="onClicked($event)"></app-square>
+  </div>
+  <div class="board-row">
+    <app-square *ngFor="let square of squares.slice(3,6)" [square]="square"
+                (squareClicked)="onClicked($event)"></app-square>
+  </div>
+  <div class="board-row">
+    <app-square *ngFor="let square of squares.slice(6,9)" [square]="square"
+                (squareClicked)="onClicked($event)"></app-square>
+  </div>
+</div>

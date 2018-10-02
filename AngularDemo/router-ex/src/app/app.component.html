@@ -1,0 +1,37 @@
+<h1>Pizzas</h1>
+<a [routerLink]="['pepperoni']">Pepperoni</a>
+<a [routerLink]="['everything','small']">Everything Small</a>
+<a [routerLink]="['everything','large']">Everything Large</a>
+<div>
+  <h1>
+    Delivery Menu
+  </h1>
+  <a [routerLink]="['pepperoni']" routerLinkActive="routerlink-active">Pepperoni Pizza</a>
+  <a [routerLink]="['other']" routerLinkActive="router-link-active">Other Menu Items</a>
+</div>
+<div>
+  <h1>
+    Customer List
+  </h1>
+  <p *ngFor="let customer of customerService.customers">
+    <a [routerLink]="['detail']" [queryParams]="{id: customer.id}" routerLinkActive="active">{{customer.name}}</a>
+  </p>
+</div>
+<h1>
+  {{title}}
+</h1>
+<button (click)="component1()">Component 1</button>
+<button (click)="component2()">Component 2</button>
+<button (click)="back()">Back</button>
+<br/>
+<span *ngIf="!userService.authenticated">
+  User:
+  <input type="input" #name /> Password:
+  <input type="password" #password />
+  <input type="button" (click)="login()" value="Login" />
+</span>
+<hr/> Authenticated:{{userService.authenticated}}
+<hr/>
+<a [routerLink]="['non-authenticated']">Non-Authenticated</a>
+<a [routerLink]="['authenticated']">Authenticated</a>
+<router-outlet></router-outlet>

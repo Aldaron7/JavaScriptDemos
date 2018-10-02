@@ -1,0 +1,33 @@
+<div *ngIf="this.showName" class="box">
+  Name: Mark
+</div>
+<div *ngIf="!this.showName" class="box">
+  Address: Atlanta
+</div>
+<!--<button (click)="this.toggle()">Toggle</button>-->
+
+<div *ngFor="let name of names; let i = index;">
+  <div>{{i}}:&nbsp;{{name}}</div>
+</div>
+
+<select [(ngModel)]="selection">
+  <option *ngFor="let option of options">{{option}}</option>
+</select>
+<div [ngSwitch]="selection">
+  <div class="block1" *ngSwitchCase="options[0]">{{options[0]}}</div>
+  <div class="block2" *ngSwitchCase="options[1]">address</div>
+  <div class="block3" *ngSwitchDefault>other</div>
+</div>
+
+<div *ngFor="let animal of animals">
+  <div [ngClass]="{'selected': animal === selectedAnimal,
+  'unselected' : animal !== selectedAnimal}" (click)="onAnimalClicked($event)">{{animal}}</div>
+</div>
+
+<div *ngFor="let animal of animals">
+  <div [ngStyle]="getAnimalStyle(animal)" (click)="onAnimalClicked($event)">{{animal}}</div>
+</div>
+
+<div appSizer="72px" appHoverer="#ffeeaa">
+  {{title}}
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/componenents-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/component-lifecycle-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dataflow-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dependency-injection-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/directives-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/form-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/http-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/more-components-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/router-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rxjs-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/storeApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/testing-ex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tictactoedemo" vcs="Git" />
+  </component>
+</project>

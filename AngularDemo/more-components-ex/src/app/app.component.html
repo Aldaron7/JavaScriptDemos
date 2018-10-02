@@ -1,0 +1,20 @@
+<h1 #title></h1>
+The title is {{title.innerHTML}}
+
+<p #paragraph1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+  aliquyam erat, sed diam voluptua. </p>
+<p #paragraph2>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+  dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+  et dolore magna aliquyam erat, sed diam voluptua.</p>
+<p *ngIf="note">{{note}}</p>
+
+<app-car *ngFor="let car of cars" (carDelete)="deleteCar(car)" [theCar]="car"></app-car>
+<div class='app'>
+  [app]
+  <app-customer-list></app-customer-list>
+</div>
+
+<p>
+  <Paragraph><title #ptitle>Paragraph1</title> ipsum dolor sit amet, consectetur adipiscing elit. </Paragraph>
+  <Paragraph><title #ptitle>Paragraph2</title> eget ornare neque, vel consectetur eros. </Paragraph>
+</p>
